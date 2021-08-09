@@ -1,6 +1,9 @@
 <p>App component</p>
 
-<ricardo-comp status="busy"></ricardo-comp>
+<p>{{myvarasdasdasdasdas}}</p>
+<ricardo-comp
+[status]="myStatus" 
+(onSendData)="printDataRicardoComp($event)">
+</ricardo-comp>
 
 <app-test2></app-test2>
-
