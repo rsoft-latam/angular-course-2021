@@ -11,3 +11,17 @@ name="juan"
 lastName="gutierres" 
 (onSendData)="printData($event)">
 </app-test2>
+
+
+
+<input type="text" [(ngModel)]="myStatus">
+
+
+
+<button (click)="sw = !sw">SHOW TEST3</button>
+<div *ngIf="sw">
+  <app-test3 
+  [name]="myStatus">
+  </app-test3>
+</div>
+
