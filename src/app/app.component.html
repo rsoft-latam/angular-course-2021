@@ -1,2 +1,11 @@
-<button (click)="onAddVideo()">add Video</button>
-<button (click)="person1Unsubscribe()">Uns PersonA</button>
+<button directive1Test (click)="onAddVideo()">add Video</button>
+<button  directive1Test (click)="person1Unsubscribe()">Uns PersonA</button>
+
+<p [directive1Test]="'red'"
+   (outputTest)="test($event)"
+  >Ni primera directiva de atributo </p>
+
+
+
+
+<ricardo-comp></ricardo-comp>

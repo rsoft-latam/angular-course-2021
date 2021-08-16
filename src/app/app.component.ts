@@ -57,4 +57,9 @@ printData(event){
   console.log('CHILD COMP SEND DATA: ', event);
 }
   
+
+test(event){
+  console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAAA', event);
+}
+
 }
