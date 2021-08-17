@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { Directive1Directive } from './directive1.directive';
 import { Directive2Directive } from './directive2.directive';
+import { Module1Module } from './module1/module1.module';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
@@ -21,7 +22,8 @@ import { Test3Component } from './test3/test3.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    Module1Module
   ],
   providers: [],
   bootstrap: [AppComponent]
