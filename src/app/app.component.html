@@ -1,11 +1,17 @@
 <button directive1Test (click)="onAddVideo()">add Video</button>
 <button  directive1Test (click)="person1Unsubscribe()">Uns PersonA</button>
 
-<p [directive1Test]="'red'"
+<input type="text" [(ngModel)]="color">
+
+<p [directive1Test]="color"
    (outputTest)="test($event)"
   >Ni primera directiva de atributo </p>
 
 
+<input type="checkbox" [(ngModel)]="sw"> ngIfRicardo
 
+<div *ngIfRicardo="sw"  (test)="test100($event)">
 
-<ricardo-comp></ricardo-comp>
+  <p>my own strcutural directive </p>
+
+</div>
