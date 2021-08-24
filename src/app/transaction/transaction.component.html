@@ -1,16 +1,14 @@
-<div [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'">
-<p>date: {{data.date}}</p>
+<div [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'" style="width: 200px; height: 250px; ">
+<!--<p>date: {{data.date | date: 'dd/mm/yy'}}</p>-->
 <p>from: {{data.from}}</p>
 <p>to: {{data.to}}</p>
 <p>quantity: {{data.quantity}}</p>
-<p>moneyType: {{data.moneyType}}</p>
+<p>moneyType: {{data.moneyType | uppercase}}</p>
 <p>mineType: {{data.mineType}}</p>
 <p>miner: {{data.miner}}</p>
 
-<button 
-[disabled]="
-data.mineType === 'PoS' && data.miner < 20
-">
-mine
-</button>
+
+
+
+<ng-content></ng-content>
 </div>

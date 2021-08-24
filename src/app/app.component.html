@@ -9,16 +9,28 @@ TOTAL BTC: {{getMoneyGlobalStatus('btc')}}
 </div>
 
 <p>---------------WALLETS----------------------------</p>
-
-<div *ngFor="let wallet of wallets; let i = index;">
+<div style="display: flex; flex-direction: row;">
+<div *ngFor="let wallet of wallets; let i = index;" style="margin: 10px;">
   <app-wallet
     [data]="wallet"
   >
   </app-wallet>
 </div>
+</div>
 
 <p>-------------------TRANSACTIONS------------------------------------</p>
 
-<div *ngFor="let transaction of transactions; let i = index;">
-<app-transaction [data]="transaction"></app-transaction>
+
+<div style="display: flex; flex-direction: row;">
+<div *ngFor="let transaction of transactions; let i = index;" style="margin: 10px;">
+<app-transaction [data]="transaction">
+<button 
+(click)="onMine(transaction, i)"
+[disabled]="
+transaction.mineType === 'PoS' && transaction.miner < 20
+">
+mine
+</button >
+</app-transaction>
+</div>
 </div>

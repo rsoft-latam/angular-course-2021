@@ -10,7 +10,7 @@ import { filter, map, delay } from 'rxjs/operators';
 
 export class AppComponent {
 
-   wallets = [
+   wallets: any[] = [
     {wallet: "MARIA123", name: "maria", eth: 0, btc: 2},
     {wallet: "JUAN123", name: "juan", eth: 5, btc: 0},
     {wallet: "LUCAS123", name: "lucas", eth: 6, btc: 3},
@@ -45,6 +45,22 @@ export class AppComponent {
      return this.wallets.reduce(
        (acc, value:any) => acc = acc + value[typeMoney], 0
      );
+   }
+
+
+   onMine(transaction:any, index :number){
+
+    this.transactions.splice(index, 1);  
+
+    const indexTO = 
+    this.wallets.findIndex(w => w.wallet === transaction.to)
+    const indexFROM = 
+    this.wallets.findIndex(w => w.wallet === transaction.from)
+
+    this.wallets[indexFROM][transaction.moneyType] = this.wallets[indexFROM][transaction.moneyType] - transaction.quantity;
+    
+    this.wallets[indexTO][transaction.moneyType] = this.wallets[indexTO][transaction.moneyType] + transaction.quantity;
+
    }
 
 }
