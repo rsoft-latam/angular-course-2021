@@ -1,0 +1,16 @@
+<div [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'">
+<p>date: {{data.date}}</p>
+<p>from: {{data.from}}</p>
+<p>to: {{data.to}}</p>
+<p>quantity: {{data.quantity}}</p>
+<p>moneyType: {{data.moneyType}}</p>
+<p>mineType: {{data.mineType}}</p>
+<p>miner: {{data.miner}}</p>
+
+<button 
+[disabled]="
+data.mineType === 'PoS' && data.miner < 20
+">
+mine
+</button>
+</div>

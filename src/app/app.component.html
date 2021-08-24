@@ -1,3 +1,24 @@
-<p>APP</p>
+<div *ngIf="getStatusTransactions()">
+THERE ARE NOT TRANSACTIONS
+</div>
 
-<app-admin1></app-admin1>
+
+<div >
+TOTAL ETH: {{getMoneyGlobalStatus('eth')}}
+TOTAL BTC: {{getMoneyGlobalStatus('btc')}}
+</div>
+
+<p>---------------WALLETS----------------------------</p>
+
+<div *ngFor="let wallet of wallets; let i = index;">
+  <app-wallet
+    [data]="wallet"
+  >
+  </app-wallet>
+</div>
+
+<p>-------------------TRANSACTIONS------------------------------------</p>
+
+<div *ngFor="let transaction of transactions; let i = index;">
+<app-transaction [data]="transaction"></app-transaction>
+</div>

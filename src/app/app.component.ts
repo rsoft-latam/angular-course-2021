@@ -9,75 +9,42 @@ import { filter, map, delay } from 'rxjs/operators';
 })
 
 export class AppComponent {
-  title = 'angular2021';
-  myStatus = 'my status';
 
-  sw = true;
+   wallets = [
+    {wallet: "MARIA123", name: "maria", eth: 0, btc: 2},
+    {wallet: "JUAN123", name: "juan", eth: 5, btc: 0},
+    {wallet: "LUCAS123", name: "lucas", eth: 6, btc: 3},
+    {wallet: "MARCOS123", name: "marcos", eth: 0, btc: 2},
+    {wallet: "PEDRO123", name: "pedro", eth: 1, btc: 0},
+    {wallet: "JUANA123", name: "juana", eth: 10, btc: 12}
+   ]; 
 
-  color:string;
-  personASub:Subscription;
-  video = 1;
-  tictock = new BehaviorSubject(this.video);
-
-  @ViewChild('myDiv1') myDiv1: ElementRef;
-  @ViewChild('myDiv2') myDiv2: ElementRef;
-  @ViewChild('myCompRicardo') myCompRicardo: any;
-  
-
-  constructor(){
-
-    // PERSON A
-    this.personASub = this.tictock.pipe(
-      filter(s => s%2 === 0)
-    ).subscribe(v => {
-      console.log('PERSON A VIDEO', v);
-    });
-    // PERSON B
-    this.tictock.pipe(
-      delay(4000)
-    ).subscribe(v => {
-      console.log('PERSON B VIDEO', v);
-    });
-    // PERSON C
-    this.tictock.subscribe(v => {
-      console.log('PERSON C VIDEO', v);
-    });
-  }
-  onAddVideo(){
-    this.video ++
-    this.tictock.next(this.video);    
-  }
-
-  person1Unsubscribe(){
-     this.personASub.unsubscribe();
-     console.log('PERSON A SE DESUSCRIBE')
-  }
-
-printDataRicardoComp(event:any){
-  console.log('RICARDO COMP:', event);
-}
+   transactions = [
+    {date: "2019-09-07T15:50+00Z", from: "MARIA123", to:"JUANA123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 5},
+    {date: "2019-09-07T15:50+00Z", from: "JUAN123", to: "PEDRO123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 21},
+    {date: "2019-09-07T15:50+00Z", from: "LUCAS123", to: "MARCOS123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 5},
+    {date: "2019-09-07T15:50+00Z", from: "MARCOS123", to: "LUCAS123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 10},
+    {date: "2019-09-07T15:50+00Z", from: "PEDRO123", to: "JUAN123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 5},
+    {date: "2019-09-07T15:50+00Z", from: "JUANA123", to: "MARIA123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 30},
+    {date: "2019-09-07T15:50+00Z", from: "MARIA123", to: "JUANA123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 2},
+    {date: "2019-09-07T15:50+00Z", from: "JUAN123", to: "PEDRO123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 15},
+    {date: "2019-09-07T15:50+00Z", from: "LUCAS123", to: "MARCOS123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 3},
+    {date: "2019-09-07T15:50+00Z", from: "MARCOS123", to: "LUCAS123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 5}
+   ];
 
 
-printData(event){
-  console.log('CHILD COMP SEND DATA: ', event);
-}
-  
-
-test(event){
-  console.log('AAA<zx<zAAAAAAAAAAAAAAAAAAAAAAAAA', event);
-}
-
-test100(event){
-  console.log('234234234234234', event);
-}
+   getStatusTransactions():boolean{
+     const auxTransactions:any[] = 
+      this.transactions.filter(
+  s => s.mineType === 'PoS' && s.miner < 20);
+    return this.transactions.length === auxTransactions.length;  
+   }
 
 
-onShowLocalVars(){
-  console.log(this.myDiv1, this.myDiv2, this.myCompRicardo);
-
-  this.myCompRicardo.onClickTest();
-
-  this.myDiv2.nativeElement.value = 'ricardo';
-}
+   getMoneyGlobalStatus(typeMoney:string): number{
+     return this.wallets.reduce(
+       (acc, value:any) => acc = acc + value[typeMoney], 0
+     );
+   }
 
 }

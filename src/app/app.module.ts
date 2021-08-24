@@ -12,6 +12,8 @@ import { HomeModule } from './pages/home/home.module';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
 import { Test3Component } from './test3/test3.component';
+import { TransactionComponent } from './transaction/transaction.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { Test3Component } from './test3/test3.component';
     Test2Component,
     Test3Component,
     Directive1Directive,
-    Directive2Directive
+    Directive2Directive,
+    WalletComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
