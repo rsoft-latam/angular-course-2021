@@ -20,7 +20,7 @@ export class AppComponent {
    ]; 
 
    transactions = [
-    {date: "2019-09-07T15:50+00Z", from: "MARIA123", to:"JUANA123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 5},
+    {date: "2019-09-07T15:50+00Z", from: "MARIA123", to:"JUANA123", quantity: 200, moneyType: "btc", mineType: "PoW", miner: 5},
     {date: "2019-09-07T15:50+00Z", from: "JUAN123", to: "PEDRO123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 21},
     {date: "2019-09-07T15:50+00Z", from: "LUCAS123", to: "MARCOS123", quantity: 2, moneyType: "btc", mineType: "PoW", miner: 5},
     {date: "2019-09-07T15:50+00Z", from: "MARCOS123", to: "LUCAS123", quantity: 2, moneyType: "eth", mineType: "PoS", miner: 10},
@@ -43,7 +43,10 @@ export class AppComponent {
 
    getMoneyGlobalStatus(typeMoney:string): number{
      return this.wallets.reduce(
-       (acc, value:any) => acc = acc + value[typeMoney], 0
+       (acc, value:any) => 
+       acc +
+       ( value[typeMoney] > 0 ? value[typeMoney] : 0),
+         0
      );
    }
 
@@ -57,9 +60,11 @@ export class AppComponent {
     const indexFROM = 
     this.wallets.findIndex(w => w.wallet === transaction.from)
 
-    this.wallets[indexFROM][transaction.moneyType] = this.wallets[indexFROM][transaction.moneyType] - transaction.quantity;
+    this.wallets[indexFROM][transaction.moneyType] = 
+    this.wallets[indexFROM][transaction.moneyType] - transaction.quantity;
     
-    this.wallets[indexTO][transaction.moneyType] = this.wallets[indexTO][transaction.moneyType] + transaction.quantity;
+    this.wallets[indexTO][transaction.moneyType] =
+     this.wallets[indexTO][transaction.moneyType] + transaction.quantity;
 
    }
 
