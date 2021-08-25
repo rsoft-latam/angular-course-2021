@@ -1,1 +1,7 @@
 <p>APP</p>
+
+
+<p>PURE: {{ data | pure }}</p>
+<p>IMPURE: {{ data | impure }}</p>
+
+<button (click)="data.push(10)">add</button>
