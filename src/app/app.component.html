@@ -12,8 +12,11 @@
         routerLinkActive="active-router">view3</button>
 <button routerLink="view1"
         routerLinkActive="active-router">view1</button>
+
 <button routerLink="view2/5/sub/34"
+        [queryParams]="{name: 'ricardo', lastName: 'pari'}"
         routerLinkActive="active-router">view2</button>
+
 <button routerLink="view1/view1sub1"
         routerLinkActive="active-router">view1/viewisub1</button>
 <div style="border: 4px red solid">
