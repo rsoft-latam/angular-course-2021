@@ -39,7 +39,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'view2', component: View2Component
+    path: 'view2/:id/sub/:id2', component: View2Component
   },
   {
     path: 'view3', loadChildren: () => import('./view3/view3.module').then(m => m.View3Module)
