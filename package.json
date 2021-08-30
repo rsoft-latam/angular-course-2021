@@ -20,7 +20,11 @@
     "@angular/router": "~12.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+
+    "bootstrap": "~5.1.0",
+    "@ng-bootstrap/ng-bootstrap": "~10.0.0",
+    "@angular/localize": "~12.2.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.1.4",
