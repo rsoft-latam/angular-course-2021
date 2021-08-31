@@ -1,18 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-transaction',
   templateUrl: './transaction.component.html',
-  styleUrls: ['./transaction.component.css']
+  styleUrls: ['./transaction.component.scss']
 })
 export class TransactionComponent implements OnInit {
 
-  @Input() data: any;
+  @Input() data:any;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
-
 
 }

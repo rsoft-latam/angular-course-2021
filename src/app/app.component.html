@@ -1,36 +1,39 @@
-<div *ngIf="getStatusTransactions()">
-THERE ARE NOT TRANSACTIONS
+<p>APP</p>
+
+<p>---------------WALLETS-----------------------</p>
+
+
+<div>
+  TOTAL BTC: {{getTotalCoin('btc')}}
+  TOTAL ETH: {{getTotalCoin('eth')}}
+</div>
+
+<div *ngIf="getTransactionsStatus()">
+  THERE ARE NOT TRANSACTIONS
+</div>
+
+<div style="display: flex; flex-direction: row">
+  <div *ngFor="let wallet of wallets">
+    <app-wallet [data]="wallet">
+
+    </app-wallet>
+  </div>
 </div>
 
 
-<div >
-TOTAL ETH: {{getMoneyGlobalStatus('eth')}}
-TOTAL BTC: {{getMoneyGlobalStatus('btc')}}
-</div>
 
-<p>---------------WALLETS----------------------------</p>
+<p>---------------TRANSACTIONS-----------------------</p>
+
 <div style="display: flex; flex-direction: row;">
-<div *ngFor="let wallet of wallets; let i = index;" style="margin: 10px;">
-  <app-wallet
-    [data]="wallet"
-  >
-  </app-wallet>
-</div>
-</div>
+  <div *ngFor="let transaction of transactions; let i = index;">
 
-<p>-------------------TRANSACTIONS------------------------------------</p>
-
-
-<div style="display: flex; flex-direction: row;">
-<div *ngFor="let transaction of transactions; let i = index;" style="margin: 10px;">
     <app-transaction [data]="transaction">
-    <button 
-    (click)="onMine(transaction, i)"
-    [disabled]="
-    transaction.mineType === 'PoS' && transaction.miner < 20
-    ">
-    mine
-    </button >
+      <button
+        [disabled]="transaction.mineType === 'PoS' &&
+       transaction.miner < 20"
+      (click)="onMine(transaction, i)">
+        mine
+      </button>
     </app-transaction>
-</div>
+  </div>
 </div>

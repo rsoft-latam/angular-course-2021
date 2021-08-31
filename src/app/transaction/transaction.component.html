@@ -1,14 +1,16 @@
-<div [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'" style="width: 200px; height: 250px; ">
-<!--<p>date: {{data.date | date: 'dd/mm/yy'}}</p>-->
-<p>from: {{data.from}}</p>
-<p>to: {{data.to}}</p>
-<p>quantity: {{data.quantity}}</p>
-<p>moneyType: {{data.moneyType | uppercase}}</p>
-<p>mineType: {{data.mineType}}</p>
-<p>miner: {{data.miner}}</p>
+<div style="border: 1px solid red;"
+    [style.background]="data.mineType === 'PoW' ? 'yellow' : 'green'">
+  <p>date: {{data.date | date: 'dd/MM/yyyy'}}</p>
+  <p>from: {{data.from}}</p>
+  <p>to: {{data.to}}</p>
+  <p>quantity: {{data.quantity}}</p>
+  <p>moneyType: {{data.moneyType | uppercase}}</p>
+  <p>mineType: {{data.mineType}}</p>
+  <p>miner: {{data.miner}}</p>
+
+  <ng-content>
+
+  </ng-content>
 
 
-
-
-<ng-content></ng-content>
 </div>
