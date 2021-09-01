@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:host {
+  width: 100%;
+  height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+}
+
+.container .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .left img {
+  width: 330px;
+  margin: -33px;
+}
+
+.container .left p {
+  color: #1c1e21;
+  font-size: 28px;
+  width: 500px;
+  margin-top: 15px;
+}
+
+.container .right {
+  margin-left: 100px;
+}
+
+.container .right .form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.container .right .form input {
+  padding: 14px 16px;
+  font-size: 17px;
+  border: 1px solid #dddfe2;
+  color: #1d2129;
+  outline: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.container .right .form input:focus {
+  box-shadow: 0 0 5px rgba(66, 133, 244, 0.7);
+  border: 1px solid rgba(66, 133, 244, 0.7);
+}
+
+.container .right .form .login-btn {
+  background: #1877f2;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  line-height: 48px;
+  padding: 0 16px;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.container .right .form .login-btn:hover {
+  background: #1668d3;
+}
+
+.container .right .form a {
+  color: #1877f2;
+  text-decoration: none;
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 14px;
+}
+
+.container .right .form a:hover {
+  text-decoration: underline;
+}
+
+.container .right .form .underline {
+  width: 100%;
+  height: 1px;
+  background: #dadde1;
+  margin-bottom: 20px;
+}
+
+.container .right .form .create-new-account-btn {
+  width: 200px;
+  margin: auto;
+  background: #42b72a;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  line-height: 48px;
+  padding: 0 16px;
+  color: #fff;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+
+.container .right .form .create-new-account-btn:hover {
+  background: #35ac1d;
+}
+
+.container .right p {
+  text-align: center;
+  margin-top: 20px;
+  color: #1c1e21;
+  font-size: 14px;
+}
+
+.container .right p a {
+  text-decoration: none;
+  color: #1c1e21;
+  font-weight: bold;
+}
+
+.container .right p a:hover {
+  text-decoration: underline;
+}
