@@ -5,8 +5,25 @@
 <button (click)="create()">crear</button>
 <button (click)="delete()">eliminar</button>
 <button (click)="update()">actualizar</button>
-
-
+<button (click)="patch()">patch</button>
 
 <app-login1></app-login1>
 <app-login2></app-login2>
+
+
+
+<p>TEMPLATE FORM</p>
+<form #formTemplate="ngForm"
+      (ngSubmit)="onSubmitTemplate(formTemplate)">
+  <input type="text" name="aagggg" ngModel>
+  <input type="text" name="bb" ngModel>
+  <input type="text" name="cc" ngModel>
+  <button type="submit">submit</button>
+</form>
+
+
+<!--
+<input type="text"  [(ngModel)]="aaaaaaa">
+<input type="text"  [(ngModel)]="bbbbbbb">
+<input type="text"  [(ngModel)]="cccccccc">
+<button (click)="adasd()">submit</button>-->
