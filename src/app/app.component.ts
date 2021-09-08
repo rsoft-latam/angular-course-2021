@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {WalletService} from "./services/wallet.service";
 import {TransactionService} from "./services/transaction.service";
+import {forkJoin} from "rxjs";
+import {exhaustMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -32,6 +34,19 @@ export class AppComponent implements OnInit {
     this.transactionService.delete(transaction.id).subscribe(() => this.loadTransactions());
     this.walletService.update(walletFROM.id, walletFROM).subscribe(res => this.loadWallets());
     this.walletService.update(walletTO.id, walletTO).subscribe(res => this.loadWallets());
+
+    /*forkJoin(
+      this.walletService.update(walletFROM.id, walletFROM),
+      this.walletService.update(walletTO.id, walletTO)
+    ).pipe(
+      exhaustMap(res => {
+        console.log('RES EXHA', res);
+        return this.transactionService.delete(transaction.id)
+      })
+    ).subscribe(res => {
+      console.log('FORK JOIN', res)
+      //this.transactionService.delete(transaction.id).subscribe(() => this.loadTransactions())
+    })*/
 
   }
 
