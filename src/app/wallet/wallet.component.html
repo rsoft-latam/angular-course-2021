@@ -1,5 +1,8 @@
 <div style="border: 1px solid green;"
-     [style.background]="(data.eth + data.btc) > 10 ? 'brown' : 'gray'">
+     [ngClass]="{
+      'brown' : (data.eth + data.btc) > 5,
+      'gray' : (data.eth + data.btc) < 2
+     }">
   <p>wallet{{data.wallet}}</p>
   <p>name{{data.name}}</p>
   <p>eth{{data.eth}}</p>

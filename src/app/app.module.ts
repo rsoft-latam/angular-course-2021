@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { WalletComponent } from './wallet/wallet.component';
-import { TransactionComponent } from './transaction/transaction.component';
+import {AppComponent} from './app.component';
+import {WalletComponent} from './wallet/wallet.component';
+import {TransactionComponent} from './transaction/transaction.component';
+import {TransactionService} from "./services/transaction.service";
+import {WalletService} from "./services/wallet.service";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -12,9 +15,14 @@ import { TransactionComponent } from './transaction/transaction.component';
     TransactionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    TransactionService,
+    WalletService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

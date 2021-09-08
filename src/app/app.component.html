@@ -21,7 +21,6 @@
 </div>
 
 
-
 <p>---------------TRANSACTIONS-----------------------</p>
 
 <div style="display: flex; flex-direction: row;">
@@ -31,7 +30,7 @@
       <button
         [disabled]="transaction.mineType === 'PoS' &&
        transaction.miner < 20"
-      (click)="onMine(transaction, i)">
+      (click)="onMine(transaction)">
         mine
       </button>
     </app-transaction>

@@ -1,0 +1,16 @@
+{
+  "vaccinated":{
+    "P002":{"name": "maria", "age": 23, "date": "2020-12-03T18:30:00.000Z", "disease": false, "vaccineType": "B", "vaccined":1, "doses": 2},
+    "P004":{"name": "marco", "age": 50, "date": "2029-12-03T18:30:00.000Z", "disease": false, "vaccineType": "A", "vaccined":1, "doses": 1},
+    "P006":{"name": "jorge", "age": 36, "date": "2021-12-03T18:30:00.000Z", "disease": false, "vaccineType": "C", "vaccined":1, "doses": 3},
+    "P009":{"name": "ramiro", "age": 24, "date": "2019-12-03T18:30:00.000Z", "disease": false, "vaccineType": "B", "vaccined":1, "doses": 2}
+},
+  "unvaccinated":{
+    "P001":{"name": "juan", "age": 16, "date": "2021-10-03T18:30:00.000Z", "disease": true, "vaccineType": "A", "vaccined":0, "doses": 0},
+    "P003":{"name": "carla", "age": 45, "date": "2021-12-03T18:30:00.000Z", "disease": true, "vaccineType": "C", "vaccined":0, "doses": 0},
+    "P005":{"name": "marta", "age": 12, "date": "2021-01-03T18:30:00.000Z", "disease": false, "vaccineType": "A", "vaccined":0, "doses": 0},
+    "P007":{"name": "maritza", "age": 18, "date": "2021-11-03T18:30:00.000Z", "disease": false, "vaccineType": "C", "vaccined":0, "doses": 0},
+    "P008":{"name": "leonardo", "age": 35, "date": "2021-02-03T18:30:00.000Z", "disease": true, "vaccineType": "B", "vaccined":0, "doses": 0},
+    "P010":{"name": "juana", "age": 13, "date": "2021-12-03T18:30:00.000Z", "disease": false, "vaccineType": "A", "vaccined":0, "doses": 0}
+  }
+}
