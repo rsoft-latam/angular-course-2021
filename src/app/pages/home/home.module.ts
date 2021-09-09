@@ -11,6 +11,7 @@ import { MessageSenderComponent } from './components/message-sender/message-send
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
@@ -30,7 +31,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     MatCardModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [
     SingletonService
