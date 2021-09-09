@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import {RouterModule, Routes} from "@angular/router";
-import {SingletonService} from "../../login/services/singleton.service";
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PostComponent } from './components/post/post.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
     MatToolbarModule
   ],
   providers: [
-    SingletonService
   ]
 })
 

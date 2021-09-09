@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {SingletonService} from "../../login/services/singleton.service";
 
 @Component({
   templateUrl: './home.component.html',
@@ -7,13 +6,12 @@ import {SingletonService} from "../../login/services/singleton.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private singletonService: SingletonService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
   onShowMessage():void{
-    console.log(this.singletonService.getMessage());
   }
 
 }
