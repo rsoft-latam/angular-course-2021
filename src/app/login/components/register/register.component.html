@@ -1,0 +1,14 @@
+<p>Register</p>
+<form #form="ngForm"
+      (ngSubmit)="onRegister(form)"
+      style="display: flex; flex-direction: column;">
+  <input type="text"
+         name="email"
+         ngModel
+         placeholder="Email address">
+  <input type="password"
+         name="password"
+         ngModel
+         placeholder="Password">
+  <button class="login-btn">Register</button>
+</form>

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService} from "./services/auth.service";
+import {MatDialog} from "@angular/material/dialog";
+import {RegisterComponent} from "./components/register/register.component";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,7 +11,9 @@ import {AuthService} from "./services/auth.service";
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,
+              private matDialog: MatDialog,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -21,7 +26,12 @@ export class LoginComponent implements OnInit {
       returnSecureToken: true
     }).subscribe(res => {
       console.log('RESPONSE', res);
+      this.router.navigate(['pages']);
     });
+  }
+
+  onCreateNewAccount(){
+    this.matDialog.open(RegisterComponent)
   }
 
 }
