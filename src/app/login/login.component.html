@@ -29,3 +29,36 @@
 </div>
 
 <p>TEST 1000</p>
+
+
+
+<p>---------REACTIVE FORM VALIDATION-----------</p>
+
+<div [formGroup]="formReactive">
+  <label>name</label>
+  <input type="text" formControlName="name">
+  <div *ngIf="getValue('name')?.invalid &&
+   (getValue('name')?.touched || getValue('name')?.dirty)">
+
+    <div *ngIf="getValue('name')?.errors?.required">
+      Name is required
+    </div>
+
+    <div *ngIf="getValue('name')?.errors?.minlength">
+      minlength is 3
+    </div>
+
+  </div>
+
+  <label>lastName</label>
+  <input type="text" formControlName="lastName">
+  <div *ngIf="getValue('lastName')?.invalid &&
+   (getValue('lastName')?.touched || getValue('lastName')?.dirty)">
+
+    <div *ngIf="getValue('lastName')?.errors?.required">
+      Last Name is required
+    </div>
+
+  </div>
+
+</div>
