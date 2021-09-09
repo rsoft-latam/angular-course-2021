@@ -1,62 +1,30 @@
-<p>sdfsdfs</p>
+<div class="container row">
 
-<input
-  type="text"
-  required
-  minlength="5"
-  maxlength="10"
-  [(ngModel)]="name"
-  #nameLocal="ngModel"
-/>
-
-<div>
-  {{nameLocal.errors | json}}
-</div>
-
-<div *ngIf="nameLocal.valid">
-  ES VALIDO
-</div>
-
-<div *ngIf="nameLocal.invalid && (nameLocal.touched || nameLocal.dirty )">
-  <div *ngIf="nameLocal.errors?.required">
-    Name is required
+  <div class="left col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+    <img src="assets/img/logo.svg" alt="">
+    <p>
+      Connect with friends and the world around you on Facebook.
+    </p>
   </div>
 
-  <div *ngIf="nameLocal.errors?.minlength">
-    minLength is required
-  </div>
-</div>
+  <div class="right col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
 
-<p>TEST 1000</p>
+    <mat-card style="background-color: white" class="form">
+      <mat-card-content style="display: flex; flex-direction: column;">
+          <input type="text" placeholder="Email address or phone number">
+          <input type="password" placeholder="Password">
 
+          <button class="login-btn">Log In</button>
 
+          <a href="">Forgot Password?</a>
 
-<p>---------REACTIVE FORM VALIDATION-----------</p>
+          <div class="underline"></div>
 
-<div [formGroup]="formReactive">
-  <label>name</label>
-  <input type="text" formControlName="name">
-  <div *ngIf="getValue('name')?.invalid &&
-   (getValue('name')?.touched || getValue('name')?.dirty)">
+          <button class="create-new-account-btn">Create New Account</button>
+      </mat-card-content>
+    </mat-card>
 
-    <div *ngIf="getValue('name')?.errors?.required">
-      Name is required
-    </div>
-
-    <div *ngIf="getValue('name')?.errors?.minlength">
-      minlength is 3
-    </div>
-
-  </div>
-
-  <label>lastName</label>
-  <input type="text" formControlName="lastName">
-  <div *ngIf="getValue('lastName')?.invalid &&
-   (getValue('lastName')?.touched || getValue('lastName')?.dirty)">
-
-    <div *ngIf="getValue('lastName')?.errors?.required">
-      Last Name is required
-    </div>
+    <p><a href="">Create a Page</a> for celebrity, band or business.</p>
 
   </div>
 
