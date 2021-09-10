@@ -11,6 +11,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
 import {MatToolbarModule} from "@angular/material/toolbar";
+import {PublicationService} from "../shared/services/publication.service";
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
@@ -34,6 +35,7 @@ const routes: Routes = [
     MatToolbarModule
   ],
   providers: [
+    PublicationService
   ]
 })
 
