@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {PagesComponent} from './pages.component';
 import {RouterModule, Routes} from "@angular/router";
-import {HeaderComponent} from "./shared/header/header.component";
+import {HeaderComponent} from "./shared/components/header/header.component";
 import {SharedMaterialModule} from "../shared/shared-material.module";
 
 const routes: Routes = [
