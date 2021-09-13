@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "./services/auth.service";
+import {AuthService} from "../core/services/auth.service";
 import {MatDialog} from "@angular/material/dialog";
 import {RegisterComponent} from "./components/register/register.component";
 import {Router} from "@angular/router";

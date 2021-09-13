@@ -3,8 +3,11 @@ import {CommonModule} from '@angular/common';
 import {HomeComponent} from './home.component';
 import {RouterModule, Routes} from "@angular/router";
 import {PublicationService} from "../shared/services/publication.service";
-import {LayoutModule} from "../../core/layout/layout.module";
 import {SharedMaterialModule} from "../../shared/shared-material.module";
+import {MessageSenderComponent} from "./components/message-sender/message-sender.component";
+import {PostComponent} from "./components/post/post.component";
+import {SidebarComponent} from "./components/sidebar/sidebar.component";
+import {StoryComponent} from "./components/story/story.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent}
@@ -12,12 +15,15 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    MessageSenderComponent,
+    PostComponent,
+    SidebarComponent,
+    StoryComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    LayoutModule,
     SharedMaterialModule
   ],
   providers: [
