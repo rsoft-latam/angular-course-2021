@@ -1,0 +1,75 @@
+.user__avatar {
+  border-radius: 50%;
+  width: 45px;
+}
+
+.storyReel {
+  padding: 10px 0;
+  display: flex;
+}
+
+.main__body {
+  display: flex;
+  background-color: #f1f2f5;
+}
+
+.feed {
+  flex: 1;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .header__input input {
+    display: none;
+  }
+
+  .header__middle {
+    display: none;
+  }
+
+  .header__info {
+    display: none;
+  }
+
+  .widgets {
+    display: none;
+  }
+
+  .feed {
+    margin-top: 20px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .story h4 {
+    font-size: 10px;
+  }
+
+  .story img {
+    width: 40px;
+  }
+}
+
+@media (min-width: 320px) {
+  .storyReel {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  /* CSS To Target 767 px width of screen */
+
+  .feed {
+    width: 50%;
+    padding: 10px 50px;
+  }
+}
