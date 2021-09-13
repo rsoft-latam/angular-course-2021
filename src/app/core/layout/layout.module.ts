@@ -5,6 +5,7 @@ import {PostComponent} from "./post/post.component";
 import {SidebarComponent} from "./sidebar/sidebar.component";
 import {StoryComponent} from "./story/story.component";
 import {SharedMaterialModule} from "../../shared/shared-material.module";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {SharedMaterialModule} from "../../shared/shared-material.module";
     StoryComponent
   ],
   imports: [
+    RouterModule,
     SharedMaterialModule
   ]
 })
