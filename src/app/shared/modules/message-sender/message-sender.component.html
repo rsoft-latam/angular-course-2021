@@ -6,7 +6,9 @@
       alt=""
     />
     <form>
-      <input class="messageSender__input" placeholder="What's on your mind?" type="text"/>
+      <input
+        (click)="onMessage()"
+        class="messageSender__input" placeholder="What's on your mind?" type="text"/>
     </form>
   </div>
 

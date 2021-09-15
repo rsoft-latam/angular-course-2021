@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {RegisterComponent} from "../../../login/components/register/register.component";
+import {PostMessageComponent} from "./components/post-message/post-message.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-message-sender',
@@ -6,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageSenderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  onMessage(){
+    this.matDialog.open(PostMessageComponent)
   }
 
 }

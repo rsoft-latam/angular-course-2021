@@ -1,0 +1,28 @@
+<p>Register</p>
+<form #form="ngForm"
+      (ngSubmit)="onRegister(form)"
+      style="display: flex; flex-direction: column;">
+
+  <input type="text"
+         name="category"
+         ngModel
+         placeholder="category">
+  <input type="text"
+         name="date"
+         ngModel
+         placeholder="date">
+  <input type="text"
+         name="email"
+         ngModel
+         placeholder="email">
+  <input type="text"
+         name="imageUrl"
+         ngModel
+         placeholder="imageUrl">
+  <input type="text"
+         name="userPhotoUrl"
+         ngModel
+         placeholder="userPhotoUrl">
+
+  <button class="login-btn">Save</button>
+</form>
