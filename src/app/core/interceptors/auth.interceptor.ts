@@ -3,7 +3,7 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor, HttpParams
+  HttpInterceptor, HttpParams, HttpErrorResponse
 } from '@angular/common/http';
 import {Observable, throwError} from 'rxjs';
 import {AuthService} from "../services/auth.service";
@@ -12,7 +12,9 @@ import {catchError} from "rxjs/operators";
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+
+  }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
@@ -29,11 +31,21 @@ export class AuthInterceptor implements HttpInterceptor {
     }
 
     return next.handle(request).pipe(
-      catchError( (err:any) => {
-        console.log('ERROR', err)
+      catchError( (err:HttpErrorResponse) => {
+        console.log('ERROR', err.status)
+
+        if(err.status === 401) {
+          this.handler401Error();
+        }
+
         return throwError('ERROR EXTRA')
       })
     );
+  }
+
+  private handler401Error(): Observable<any> {
+    this.authService.logout();
+    return throwError('ERROR 401')
   }
 
 }

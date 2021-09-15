@@ -1,0 +1,20 @@
+{
+  "publications": {
+    "-Miwzh8xnReDcESiBx_6": {
+      "category": "work",
+      "date": "17/82/2021",
+      "description": "soy nuevo",
+      "idUser": 2,
+      "imageUrl": "http://fitebase/img.jpg",
+      "userPhotoUrl": "http://fitebase/user1.jpg"
+    },
+    "-MiwznqItZPETiI9B1DG": {
+      "category": "entertainment",
+      "date": "17/82/2021",
+      "description": "soy nuevo",
+      "idUser": 2,
+      "imageUrl": "http://fitebase/img.jpg",
+      "userPhotoUrl": "http://fitebase/user1.jpg"
+    }
+  }
+}
