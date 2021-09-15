@@ -1,0 +1,25 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f2f5;
+
+  .user__avatar {
+    border-radius: 50%;
+    width: 45px;
+  }
+
+  .storyReel {
+    padding: 10px 0;
+    display: flex;
+  }
+
+  .feed {
+    flex: 1;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

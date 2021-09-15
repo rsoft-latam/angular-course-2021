@@ -1,1 +1,35 @@
-<p>profile works!</p>
+<!-- main body starts -->
+<div class="profile">
+  <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 100px;">
+    <div style="display: flex; justify-content: center; align-items: end ;width: 70%; height: 400px; background-color: red;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWlesSSRpMdAEEqhDg6Ss3w4Y32DYHTVJkwkL-3Bz-pgjX7MCLNdqafRRhH5z6pQUvy4A&usqp=CAU')">
+    <div style="display: flex; flex-direction: column; margin-bottom: -150px; align-items: center;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS99qly0iUeHsWnxHiMsrVVrHPjFh_Wma8NzHECqmmVXGc4mTDvEuz79s7Kgjfs49cYmII&usqp=CAU"
+        alt="" style="width: 200px; height: 200px; padding: 5px; border-radius: 100%;">
+      <span style="font-size: 30px; font-weight: bold;">Ricardo Pari</span>
+      <span style="font-size: 20px;">Add Bio</span>
+    </div>
+    </div>
+  </div>
+
+  <div class="row" style="width: 100%;">
+
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" style="width: 300px;">
+      <p>MENU</p>
+    </div>
+
+    <div class="feed col-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
+
+      <app-message-sender></app-message-sender>
+
+      <ng-container *ngFor="let post of [1,2,3,4]">
+        <app-post></app-post>
+      </ng-container>
+    </div>
+
+  </div>
+
+</div>
+<!-- main body ends -->
+
+<div id="fb-root"></div>
