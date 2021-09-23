@@ -1,15 +1,20 @@
 {
   "transactions": {
     "T001":{"date": "2019-12-07T18:30:00.000Z", "from": "MARIA123", "to":"JUANA123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 5},
-    "T002":{"date": "2021-11-07T18:30:00.000Z", "from": "JUAN123", "to": "PEDRO123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 21},
-    "T003":{"date": "2010-06-05T18:30:00.000Z", "from": "LUCAS123", "to": "MARCOS123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 5},
+    "T002":{"date": "2021-11-07T18:30:00.000Z", "from": "JUAN123", "to": "PEDRO123", "quantity": 1, "moneyType": "eth", "mineType": "PoS", "miner": 21},
+    "T003":{"date": "2010-06-05T18:30:00.000Z", "from": "LUCAS123", "to": "MARCOS123", "quantity": 3, "moneyType": "btc", "mineType": "PoW", "miner": 5},
     "T004":{"date": "2021-12-03T18:30:00.000Z", "from": "MARCOS123", "to": "LUCAS123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 10},
-    "T005":{"date": "2010-02-07T18:30:00.000Z", "from": "PEDRO123", "to": "JUAN123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 5},
+    "T005":{"date": "2010-02-07T18:30:00.000Z", "from": "PEDRO123", "to": "JUAN123", "quantity": 5, "moneyType": "btc", "mineType": "PoW", "miner": 5},
     "T006":{"date": "2021-12-02T18:30:00.000Z", "from": "JUANA123", "to": "MARIA123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 30},
     "T007":{"date": "2020-12-01T18:30:00.000Z", "from": "MARIA123", "to": "JUANA123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 2},
-    "T008":{"date": "2021-11-07T18:30:00.000Z", "from": "JUAN123", "to": "PEDRO123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 15},
+    "T008":{"date": "2021-11-07T18:30:00.000Z", "from": "JUAN123", "to": "PEDRO123", "quantity": 1, "moneyType": "eth", "mineType": "PoS", "miner": 15},
     "T009":{"date": "2008-01-06T18:30:00.000Z", "from": "LUCAS123", "to": "MARCOS123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 3},
-    "T010":{"date": "2020-01-11T18:30:00.000Z", "from": "MARCOS123", "to": "LUCAS123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 5}
+    "T010":{"date": "2000-01-11T18:30:00.000Z", "from": "MARCOS123", "to": "LUCAS123", "quantity": 8, "moneyType": "eth", "mineType": "PoS", "miner": 5},
+    "T011":{"date": "2021-12-02T18:30:00.000Z", "from": "JUANA123", "to": "MARIA123", "quantity": 2, "moneyType": "eth", "mineType": "PoS", "miner": 0},
+    "T012":{"date": "2010-12-01T18:30:00.000Z", "from": "MARIA123", "to": "JUANA123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 2},
+    "T013":{"date": "2021-11-07T18:30:00.000Z", "from": "JUAN123", "to": "PEDRO123", "quantity": 1, "moneyType": "eth", "mineType": "PoS", "miner": 1},
+    "T014":{"date": "2008-01-06T18:30:00.000Z", "from": "LUCAS123", "to": "MARCOS123", "quantity": 2, "moneyType": "btc", "mineType": "PoW", "miner": 3},
+    "T015":{"date": "2000-01-11T18:30:00.000Z", "from": "MARCOS123", "to": "LUCAS123", "quantity": 8, "moneyType": "eth", "mineType": "PoS", "miner": 1}
 },
   "wallets": {
     "W001":  {"wallet": "MARIA123", "name": "maria", "eth": 0, "btc": 2},
